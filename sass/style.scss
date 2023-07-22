@@ -19,20 +19,23 @@ $f1:rgb(238, 0, 0);
 body {
     font-family: "Rubik";
 }
-@mixin cen{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+
+@mixin dir($d1: center, $d2: center, $d3: center){
+    text-align: $d1;
+    align-items: $d2;
+    justify-content: $d3;
 }
 
 main {
-    @include cen;
+    @include dir;
 }
 
-section .der{
-    text-align: right;
-    align-items: right;
-    justify-content: right;
+.der{
+    @include dir (right, right, right);
+}
+
+.izq{
+    @include dir (left, left, left);
 }
 
 @mixin dis{
@@ -48,6 +51,7 @@ section .der{
 
 #pilotos article{
     @include dis;
+    @include dir (left, left, left);
     img { background-color: white;
         border: 5px solid black;}
 }
@@ -89,7 +93,7 @@ section .der{
 }
 
 #noticia {
-    @include cen;
+    @include dir;
     background-color: #fff;
     border-right: 10px solid $f1;
     border-left: 10px solid $f1;
@@ -107,9 +111,7 @@ section .der{
 
 #gp1 {
     @include gp;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
+    @include dir (left, left, left);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-right: 10px solid $f1;
@@ -117,9 +119,7 @@ section .der{
 
 #gp2 {
     @include gp;
-    text-align: right;
-    align-items: right;
-    justify-content: right;
+    @include dir (right, right, right);
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     border-left: 10px solid $f1;

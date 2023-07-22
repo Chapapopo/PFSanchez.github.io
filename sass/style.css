@@ -8,10 +8,16 @@ main {
   justify-content: center;
 }
 
-section .der {
+.der {
   text-align: right;
   align-items: right;
   justify-content: right;
+}
+
+.izq {
+  text-align: left;
+  align-items: left;
+  justify-content: left;
 }
 
 #equi article {
@@ -26,6 +32,9 @@ section .der {
   padding-left: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: left;
+  align-items: left;
+  justify-content: left;
 }
 #pilotos article img {
   background-color: white;
