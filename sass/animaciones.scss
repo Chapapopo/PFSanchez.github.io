@@ -1,0 +1,13 @@
+/* animaciones usadas */
+
+.destacar {
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s; /* Agrega una transición suave a la propiedad transform */
+  }
+
+@media screen and (min-width: 900px) {/* especifico que solo va a funcionar a partir de 900px */
+  .destacar:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+  }
+}

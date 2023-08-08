@@ -1,0 +1,27 @@
+/* todos los mixins que utilizo */
+
+@mixin dir($d1: center, $d2: center, $d3: center){/* me permite rapidamente disponer de que forma van a quedar los objetos */
+    text-align: $d1;
+    align-items: $d2;
+    justify-content: $d3;
+}
+
+@mixin dis{/* agrego espacio rapidamente */
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@mixin equipos($c1, $c2:white){/* me permitira crear los estilos para los equipos mas rapido */
+    color: $c1;
+    background-color: $c2;
+}
+
+@mixin gp{/* estilos para los grandes premios y noticias */
+    background-color: #fff;
+    border-bottom: 10px solid $f1;
+    border-top: 10px solid $f1;
+    padding: 10px;
+    margin-bottom: 20px;
+}
